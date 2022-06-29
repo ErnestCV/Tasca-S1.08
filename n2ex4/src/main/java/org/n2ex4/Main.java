@@ -20,13 +20,14 @@ public class Main {
         //Les cadenes que contenen una "e" primer, la resta de cadenes després
         System.out.println(llista.stream()
                 .sorted(Comparator.comparingInt(string -> string.toLowerCase().contains("e") ? 0 : 1))
-                .collect(Collectors.toList())); //Primera manera
+                .collect(Collectors.toList())); //Primera manera, només posa les strings amb "e" però no ordena alfabèticament
         System.out.println(llista.stream()
                 .collect(Collectors.groupingBy(string -> string.toLowerCase().contains("e") ? 0 : 1))
                 .values()
                 .stream()
+                .map(list -> list.stream().sorted().collect(Collectors.toList()))
                 .flatMap(List::stream)
-                .collect(Collectors.toList())); //Segona manera
+                .collect(Collectors.toList())); //Segona manera, separa amb "e" i no "e" i ordena, després ho junta
 
         //Modifica tots els elements de la llista que tenen una ‘a’. Modifica la ‘a’ per un ‘4’
         System.out.println(llista.stream().map(s -> s.replace("a", "4")).collect(Collectors.toList()));
