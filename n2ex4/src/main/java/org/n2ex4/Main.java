@@ -33,7 +33,7 @@ public class Main {
         System.out.println(llista.stream().map(s -> s.replace("a", "4")).collect(Collectors.toList()));
 
         //Mostra només els elements que són numèrics
-        System.out.println(llista.stream().filter(s -> s.matches("[0-9]+")).collect(Collectors.toList()));
+        System.out.println(llista.stream().filter(s -> s.matches("\\d+")).collect(Collectors.toList()));
 
     }
 }
