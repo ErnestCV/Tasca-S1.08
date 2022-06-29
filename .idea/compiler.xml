@@ -6,7 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="n1ex7" />
+        <module name="n1ex6" />
+        <module name="n1ex8" />
+        <module name="n1ex3" />
         <module name="n1ex2" />
+        <module name="n1ex5" />
+        <module name="n1ex4" />
         <module name="n1ex1" />
       </profile>
     </annotationProcessing>
